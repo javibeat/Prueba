@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Cargar el menú desde menu.html
     var xhr = new XMLHttpRequest();
     xhr.onload = function() {
         if (this.status == 200) {
@@ -9,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const hamburger = document.querySelector('.hamburger');
             const menu = document.querySelector('.menu');
 
-            if (hamburger) {
+            if (hamburger && menu) {
                 hamburger.addEventListener('click', function() {
                     menu.classList.toggle('nav-active');
                     this.classList.toggle('toggle');
